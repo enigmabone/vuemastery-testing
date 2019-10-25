@@ -1,11 +1,13 @@
 <template>
-  <h1>Showing Event #{{ id }}</h1>
+  <div>
+    <h1>{{ username }}'s page</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "EventShow",
-  props: ["id"]
+  name: "User",
+  props: ["username"]
 };
 </script>
 
