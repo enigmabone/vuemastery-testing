@@ -1,14 +1,20 @@
 <template>
-  <b-container>
-    <div id="nav">
-      <router-link :to="{ name: 'EventList' }">Event List</router-link>|
-      <router-link :to="{ name: 'EventCreate'}">Create Event</router-link>|
-      <router-link :to="{ name: 'User', params: {username: 'Kyle'}}">Kyle</router-link>
-    </div>
-    <router-view />
-  </b-container>
+  <div>
+    <Navbar />
+    <b-container>
+      <router-view />
+    </b-container>
+  </div>
 </template>
-
+<script>
+import Navbar from "@/components/Navbar.vue";
+export default {
+  name: "App",
+  components: {
+    Navbar
+  }
+};
+</script>
 <style lang="scss">
 html {
   -webkit-text-size-adjust: 100%;
